@@ -4,7 +4,7 @@ Create portable appimages that can contain multiple apps and a full os
 # appimage-container-builder
 Build:
 
-docker build -t [Image Name]:{Version You Want} {Path of the Docker File} --no-cache
+    docker build -t [Image Name]:{Version You Want} {Path of the Docker File} --no-cache
 
 Run:
 
