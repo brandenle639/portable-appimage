@@ -1,11 +1,15 @@
 # portable-appimage
-[App Description]
+Create portable appimages that can contain multiple apps and a full os
 
-# To Build
-docker build -it [Image Name]:{Version You Want} {Path of the Docker File} --no-cache
+# appimage-container-builder
+Build:
 
-# To Run
-[Run Commands/How to run it]
+docker build -t [Image Name]:{Version You Want} {Path of the Docker File} --no-cache
+
+Run:
+docker run -it --rm --privileged -v {Scripts Folder}:/scripts [Image Name]:{Version You Want} bash
+
+
 
 # Notes
 Runs as non-root user

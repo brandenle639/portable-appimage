@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=template
+Exec=template
+Comment=template
+Icon=appimagetool
+Categories=Development;
+Terminal=true
+

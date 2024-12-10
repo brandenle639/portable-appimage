@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>appimagetool.desktop</id>
+  <name>template</name>
+  <summary>Portable template</summary>
+  <description>
+    <p>
+      Portable version of template
+    </p>
+  </description>
+  <project_group>AppImage</project_group>
+  <provides>
+    <binary>template</binary>
+  </provides>
+</component>
