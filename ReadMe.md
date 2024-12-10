@@ -47,6 +47,8 @@ To create a new app image:
 
     In python-template edit '{version}' with the related python version
 
+    For specific apps that have special folders add the related commands from the "Specific Apps" in vscode to the new script file.
+
 # Notes
 The AppImage doesn't give root privilages unless run as root
 
