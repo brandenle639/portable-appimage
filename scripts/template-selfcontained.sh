@@ -44,4 +44,4 @@ sed -i -e $cnt'a \\n* ALL=(ALL) ALL' /tmp/appmaker/etc/sudoers
 
 chmod a+x -R /tmp/appmaker
 chown -R root:root /tmp/appmaker/usr && chmod -R 4755 /tmp/appmaker/usr
-appimagetool -n /tmp/appmaker /tmp/bashcore.AppImage
+appimagetool -n /tmp/appmaker /tmp/template.AppImage

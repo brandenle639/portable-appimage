@@ -1,4 +1,6 @@
 cd /tmp
+program="bash"
+appcommand="bin\/bash"
 cp -R /apptemplate /tmp/appmaker
 wget https://images.linuxcontainers.org/images/debian/bookworm/amd64/default/20241209_05%3A24/rootfs.tar.xz -O rootfs.tar.xz
 tar xvf rootfs.tar.xz -C /tmp/appmaker
@@ -16,9 +18,9 @@ done
 for file in *; do
  dpkg-deb -x "$file" /tmp/appmaker
 done
-sed -i -e "s/template/bash/g" /tmp/appmaker/usr/share/metainfo/appimagetool.appdata.xml
-sed -i -e "s/template/bash/g" /tmp/appmaker/usr/share/applications/appimagetool.desktop
-sed -i -e "s/template/bin\/bash/g" /tmp/appmaker/AppRun
+sed -i -e "s/template/${program}/g" /tmp/appmaker/usr/share/metainfo/appimagetool.appdata.xml
+sed -i -e "s/template/${program}/g" /tmp/appmaker/usr/share/applications/appimagetool.desktop
+sed -i -e "s/template/${appcommand}/g" /tmp/appmaker/AppRun
 sed -i -e '5a \\nPATH=$this_dir:$this_dir/usr/local/bin:$this_dir/usr/local/sbin:$this_dir/usr/local/bin:$this_dir/usr/sbin:$this_dir/usr/bin:$this_dir/sbin:$this_dir/bin' /tmp/appmaker/AppRun
 
 ###Specific Apps###
@@ -60,4 +62,4 @@ sed -i -e $cnt'a \\n* ALL=(ALL) ALL' /tmp/appmaker/etc/sudoers
 
 chmod a+x -R /tmp/appmaker
 chown -R root:root /tmp/appmaker/usr && chmod -R 4755 /tmp/appmaker/usr
-appimagetool -n /tmp/appmaker /tmp/termbashprog
+appimagetool -n /tmp/appmaker /tmp/vscode.AppImage
