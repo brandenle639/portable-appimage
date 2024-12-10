@@ -15,37 +15,37 @@ Run:
 # Scripts
 Files:
 
-bashcore-selfcontained.sh - Self contained rootfs bash
+    bashcore-selfcontained.sh - Self contained rootfs bash
 
-bashcore-selfcontainedargs.sh - Self contained rootfs bash that can run other apps by default
+    bashcore-selfcontainedargs.sh - Self contained rootfs bash that can run other apps by default
 
-python3130.sh - Builds Self contained rootfs with Python v3.13.0 from Python scratch
+    python3130.sh - Builds Self contained rootfs with Python v3.13.0 from Python scratch
 
-python-template.sh - Builds Self contained rootfs with Python from Python scratch
+    python-template.sh - Builds Self contained rootfs with Python from Python scratch
 
-template-selfcontained.sh - Template for new app images
+    template-selfcontained.sh - Template for new app images
 
-template-selfcontainedargs.sh - Template for new app images args
+    template-selfcontainedargs.sh - Template for new app images args
 
-vscode-app-selfcontained.sh - Builds Self contained rootfs with terminal based with Visual Studio code
+    vscode-app-selfcontained.sh - Builds Self contained rootfs with terminal based with Visual Studio code
 
-vscode-app-selfcontainedargs.sh - Builds Self contained rootfs with arguments with Visual Studio code
+    vscode-app-selfcontainedargs.sh - Builds Self contained rootfs with arguments with Visual Studio code
 
 Example with arguments:
 
-./appimageargs.AppImage {Args}
+    ./appimageargs.AppImage {Args}
 
 To create a new app image:
 
-Copy the related template file you want and then edit the following:
+    Copy the related template file you want and then edit the following:
 
-Edit the 'program' variable with the related app
+    Edit the 'program' variable with the related app
 
-Edit the 'appcommand' variable with the related app
+    Edit the 'appcommand' variable with the related app
 
-Add the related package(s) to the 'PACKAGES' array or copy the wget command to download the related package to the "/tmp/dwn" folder.
+    Add the related package(s) to the 'PACKAGES' array or copy the wget command to download the related package to the "/tmp/dwn" folder.
 
-In python-template edit '{version}' with the related python version
+    In python-template edit '{version}' with the related python version
 
 # Notes
 The AppImage doesn't give root privilages unless run as root
